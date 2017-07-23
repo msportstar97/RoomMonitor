@@ -1,0 +1,28 @@
+imports:
+    - { resource: config.yml }
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+monolog:
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+        nested:
+            type: stream
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
+            level: debug
+        console:
+            type: console
+            process_psr_3_messages: false
+parameters:
+    client_id: '24d850a7ea4d4f43951aed102c3f5a67'
+    client_secret: '1fb2370902234dc888e9eed76c99d8bd'
+    redirect_uri: 'http://localhost:8080/callback/artikcloud '
+    device_type_id: 'dt2d93bdb9c8fa446eb4a35544e66150f7'
+    device_type_unique_name: 'cloud.artik.example.roommonitor'
