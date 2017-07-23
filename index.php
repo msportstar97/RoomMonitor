@@ -13,10 +13,11 @@ RoomMonitor will be able to display, using this website, data such as the number
 Other data can also be possible with additional sensors.
 This data can be viewed overtime and will be stored in a database within the ARTIK Cloud, a Samsung IoT Cloud service.
 Using this website, you will be able to easily access this stored data without the unnecessary step of logging into the ARTIK Cloud.
-By simply navigating to this website, you will be able to make adjustments to your building that can help lower energy costs and save you money! <br><br>
+By simply navigating to this website, you will be able to make adjustments to your building that can help lower energy costs and save you money! <br>
+</p>";
 
-This application has been and is currently being developed by  Michelle Giang, Nikki Kyllonen, and SeungHo Lee as part of their 2017 Summer IoT Project at POSTECH's DPNM Laboratory.
-
+$content1="
+<p>This application has been and is currently being developed by  Michelle Giang, Nikki Kyllonen, and SeungHo Lee as part of their 2017 Summer IoT Project at POSTECH's DPNM Laboratory.
 </p>";
 
 include 'layout.php';

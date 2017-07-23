@@ -19,6 +19,7 @@
 
       <div id="content_area">
         <?php echo '<span style = "font-size: 16pt">' . $content . '</span>'; ?>
+        <?php echo '<span style = "font-size: 16pt">' . $content1 . '</span>'; ?>
       </div>
 
       <div id="sidebar">
