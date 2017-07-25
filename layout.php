@@ -22,9 +22,6 @@
         <?php echo '<span style = "font-size: 16pt">' . $content1 . '</span>'; ?>
       </div>
 
-      <div id="sidebar">
-      </div>
-
     </div>
   </body>
 </html>
