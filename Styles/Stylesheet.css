@@ -49,10 +49,10 @@ body p
 #navigation
 {
   height: 60px;
-  border: 3px solid blue;
+  border: 3px solid black;
   margin-top: 20px;
   text-shadow: 0.1em 0.1em #333;
-  background-color: cyan;
+  background-color: white;
 }
 
 #nav
