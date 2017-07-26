@@ -13,7 +13,7 @@
 
       <nav id="navigation">
         <ul id="nav">
-          <li><a href="index.php">Home</a></li>
+          <li><a href="intro.php">Home</a></li>
           <li><a href="room.php">Room Data</a></li>
       </nav>
 

@@ -1,0 +1,6 @@
+{
+   "client_id": "24d850a7ea4d4f43951aed102c3f5a67",
+   "client_secret": "1fb2370902234dc888e9eed76c99d8bd",
+   "redirect_uri": "http://localhost:80/roommonitor",
+   "device_type_id": "dt2d93bdb9c8fa446eb4a35544e66150f7"
+}

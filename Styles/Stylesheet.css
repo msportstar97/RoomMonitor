@@ -70,7 +70,7 @@ body p
 
 #nav a:link, nav a:active, nav a:visited
 {
-  display: block;
+  display: black;
   color: #000;
   text-decoration: none;
 }

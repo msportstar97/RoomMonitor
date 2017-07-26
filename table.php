@@ -16,7 +16,7 @@
         <th> Comments </th>
       </tr>
       <tr>
-        <td> <a href=room1.php> 1 </a> </td>
+        <td> <a href=hello.php> 1 </a> </td>
         <td> Empty Room </td>
       </tr>
     </table>
