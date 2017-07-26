@@ -1,5 +1,7 @@
 <?php
 /**
+ * Following code is largely borrowed/inspired by:
+ * https://github.com/artikcloud/tutorial-php-yourFirstWebapp/blob/master/ArtikCloudProxy.php
  * ARTIK Cloud helper class that communicates to ARTIK Cloud
  * */
 class ArtikCloudProxy {
@@ -12,6 +14,9 @@ class ArtikCloudProxy {
     const API_USERS_SELF = "/users/self";
     const API_MESSAGES_LAST = "/messages/last?sdids=<DEVICES>&count=<COUNT>";
     const API_MESSAGES_POST = "/messages";
+
+    # my attempt at path for getNormalizedMessages()
+    const API_MESSAGES_NORM = "/messages?sdids=<DEVICES>&startDate=<SDATE>&endDate=<EDATE>";
 
     # Members
     public $token = null;
@@ -64,6 +69,18 @@ class ArtikCloudProxy {
         $apiPath = ArtikCloudProxy::API_MESSAGES_LAST;
         $apiPath = str_replace("<DEVICES>", $deviceCommaSeparatedList, $apiPath);
         $apiPath = str_replace("<COUNT>", $countByDevice, $apiPath);
+        return $this->getCall(ArtikCloudProxy::API_URL.$apiPath);
+    }
+
+    /**
+     * my attempt at writing the getNormalizedMessages() API call
+     * GET /messages API
+     */
+    public function getHistoricalMessages($deviceCommaSeparatedList, $startDate, $endDate){
+        $apiPath = ArtikCloudProxy::API_MESSAGES_NORM;
+        $apiPath = str_replace("<DEVICES>", $deviceCommaSeparatedList, $apiPath);
+        $apiPath = str_replace("<SDATE>", $startDate, $apiPath);
+        $apiPath = str_replace("<EDATE>", $endDate, $apiPath);
         return $this->getCall(ArtikCloudProxy::API_URL.$apiPath);
     }
 }

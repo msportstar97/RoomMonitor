@@ -1,5 +1,7 @@
 <?php
 /**
+ * Following code is largely borrowed/inspired by:
+ * https://github.com/artikcloud/tutorial-php-yourFirstWebapp/blob/master/ArtikCloudProxy.php
  * ARTIK Cloud helper class that communicates to ARTIK Cloud via ARTIK Cloud PHP SDK
  * */
 require_once(dirname(__FILE__) .'/sdk/Swagger.php');
