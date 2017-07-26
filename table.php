@@ -19,6 +19,14 @@
         <td> <a href=room1.php> 1 </a> </td>
         <td> Empty Room </td>
       </tr>
+      <tr>
+        <td> <a href=room2.php> 2 </a> </td>
+        <td> Empty Room </td>
+      </tr>
+      <tr>
+        <td> <a href=room3.php> 3 </a> </td>
+        <td> Empty Room </td>
+      </tr>
     </table>
   </body>
 </html>

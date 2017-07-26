@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title> Room 1 Temperature and Humidity Log </title>
+    <title> Room 2 Temperature and Humidity Log </title>
     <style>
       table, th, td {
         border: 1px solid black;
@@ -15,7 +15,7 @@
         <th> Humidity </th>
       </tr>
       <?php
-        $str = fopen("Arduinodata.txt", 'r');
+        $str = fopen("Arduinodata2.txt", 'r');
 
         while(($line = fgetcsv($str, 1000, ",")) !== false) {
           echo "<tr>";
