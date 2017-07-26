@@ -10,6 +10,7 @@
   </head>
   <body>
     <table>
+      <caption> Room 3 Temperature and Humidity Log </caption>
       <tr>
         <th> Temperature </th>
         <th> Humidity </th>
