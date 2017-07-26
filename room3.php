@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta http-equiv="refresh" content="10" > 
     <title> Room 3 Temperature and Humidity Log </title>
     <style>
       table, th, td {
