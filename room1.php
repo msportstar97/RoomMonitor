@@ -1,19 +1,68 @@
-<html lang="en">
-<head>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Hello!</h1>
-    <p>Please <a href="https://accounts.artik.cloud/authorize?response_type=token&client_id=24d850a7ea4d4f43951aed102c3f5a67">login</a></p>
+<?php
+    // Start MySQL Connection
+    include('dbconnect.php');
+?>
 
-    <script>
-    query = window.location.hash.split("#");
-    if (query[1]) {
-        // accounts sends an URL fragment in the login callback,
-        // Now make web browser to load a new url
-        window.location = "hello.php?"+query[1];
+<html>
+<head>
+    <title>Arduino Temperature Log</title>
+    <style type="text/css">
+        .table_titles, .table_cells_odd, .table_cells_even {
+                padding-right: 20px;
+                padding-left: 20px;
+                color: #000;
+        }
+        .table_titles {
+            color: #FFF;
+            background-color: #666;
+        }
+        .table_cells_odd {
+            background-color: #CCC;
+        }
+        .table_cells_even {
+            background-color: #FAFAFA;
+        }
+        table {
+            border: 2px solid #333;
+        }
+        body { font-family: "Trebuchet MS", Arial; }
+    </style>
+</head>
+
+    <body>
+        <h1>Arduino Temperature and Humidity Log</h1>
+    <table border="0" cellspacing="0" cellpadding="4">
+      <tr>
+            <td class="table_titles">Temperature in Celsius</td>
+            <td class="table_titles">Humidity</td>
+          </tr>
+<?php
+    // Retrieve all records and display them
+    $result = mysqli_query($dbh,"SELECT * FROM temperature ORDER BY id ASC");
+
+    // Used for row color toggle
+    $oddrow = true;
+
+    // process every record
+    while( $row = mysqli_fetch_array($result) )
+    {
+        if ($oddrow)
+        {
+            $css_class=' class="table_cells_odd"';
+        }
+        else
+        {
+            $css_class=' class="table_cells_even"';
+        }
+
+        $oddrow = !$oddrow;
+
+        echo '<tr>';
+        echo '<td'.$css_class.'>'.$row["celsius"].'</td>';
+        echo '<td'.$css_class.'>'.$row["humidity"].'</td>';
+        echo '</tr>';
     }
-    </script>
-</body>
+?>
+    </table>
+    </body>
 </html>
