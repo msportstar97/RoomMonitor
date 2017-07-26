@@ -38,7 +38,7 @@
           </tr>
 <?php
     // Retrieve all records and display them
-    $result = mysqli_query($dbh,"SELECT * FROM temperature ORDER BY id ASC");
+    $result = mysqli_query($dbh,"SELECT * FROM temperature");
 
     // Used for row color toggle
     $oddrow = true;
